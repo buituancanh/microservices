@@ -1,0 +1,20 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: mysql-service
+  namespace: default
+spec:
+  externalTrafficPolicy: Cluster
+  ipFamilies:
+    - IPv4
+  ports:
+    - protocol: TCP
+      port: 3306
+      targetPort: 3306
+  internalTrafficPolicy: Cluster
+  type: NodePort
+  ipFamilyPolicy: SingleStack
+  sessionAffinity: None
+  selector:
+    app: mysql
+

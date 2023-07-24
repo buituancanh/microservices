@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<getUserRequest xmlns="https://www.services.elca.vn/uri/xmlns/account/1/0">
+    <number>10001</number>
+</getUserRequest>
+
+
+<createOrder xmlns="https://www.services.elca.vn/uri/xmlns/order/1/0">
+<accountNumber>10001</accountNumber>
+<amount>10000000</amount>
+</createOrder>

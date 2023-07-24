@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="https://www.services.elca.vn/uri/xmlns/order/1/0"
+           targetNamespace="https://www.services.elca.vn/uri/xmlns/order/1/0"
+           elementFormDefault="qualified">
+    <xs:element name="createOrder" type="createOrderType"/>
+    <xs:element name="orderCreated" type="orderCreatedType"/>
+    <xs:complexType name="createOrderType">
+        <xs:sequence>
+            <xs:element name="accountNumber" type="xs:string"/>
+            <xs:element name="amount" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="orderCreatedType">
+        <xs:sequence>
+            <xs:element name="orderNumber" type="xs:long"/>
+            <xs:element name="timestamp" type="xs:dateTime"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

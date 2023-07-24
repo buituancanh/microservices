@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+      </profile>
+      <profile name="Annotation profile for Java tech microservices" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$PROJECT_DIR$/../../tools/apache-maven-3.6.3/repo/org/projectlombok/lombok/1.18.20/lombok-1.18.20.jar" />
+          <entry name="$PROJECT_DIR$/../../tools/apache-maven-3.6.3/repo/org/mapstruct/mapstruct-processor/1.4.2.Final/mapstruct-processor-1.4.2.Final.jar" />
+          <entry name="$PROJECT_DIR$/../../tools/apache-maven-3.6.3/repo/org/mapstruct/mapstruct/1.4.2.Final/mapstruct-1.4.2.Final.jar" />
+        </processorPath>
+        <module name="account-impl" />
+        <module name="microservices-common" />
+        <module name="microservices-mail" />
+        <module name="account-api" />
+        <module name="order-api" />
+        <module name="order-impl" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="microservice-account" target="17" />
+      <module name="microservice-common" target="11" />
+      <module name="microservice-config" target="17" />
+      <module name="microservice-mail" target="17" />
+      <module name="microservice-order" target="17" />
+      <module name="microservice-parent" target="17" />
+      <module name="microservice-web-gateway" target="17" />
+      <module name="microservices-config" target="17" />
+      <module name="microservices-web-gateway" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="account-api" options="-parameters" />
+      <module name="account-impl" options="-parameters" />
+      <module name="microservice-account" options="-parameters" />
+      <module name="microservice-common" options="-parameters" />
+      <module name="microservice-config" options="-parameters" />
+      <module name="microservice-mail" options="-parameters" />
+      <module name="microservice-order" options="-parameters" />
+      <module name="microservice-web-gateway" options="-parameters" />
+      <module name="microservices-account" options="" />
+      <module name="microservices-common" options="-parameters" />
+      <module name="microservices-config" options="-parameters" />
+      <module name="microservices-mail" options="-parameters" />
+      <module name="microservices-order" options="" />
+      <module name="microservices-web-gateway" options="-parameters" />
+      <module name="order-api" options="-parameters" />
+      <module name="order-impl" options="-parameters" />
+    </option>
+  </component>
+</project>

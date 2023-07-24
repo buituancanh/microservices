@@ -1,0 +1,6 @@
+# Project exclude paths
+/sources/microservices-demo/account/account-api/target/
+/sources/microservices-demo/account/account-impl/target/
+/sources/microservices-demo/common/target/
+/sources/microservices-demo/mail/target/
+/.idea/sonarlint/**

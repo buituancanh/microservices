@@ -1,0 +1,19 @@
+# HTTP Server
+server.port: 2223   # HTTP (Tomcat) port
+#
+spring:
+  application:
+    name: order-service  # Service registers under this name
+  datasource: # Database configuration for AccountsService
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3307/orders?serverTimezone=UTC
+    username: demo
+    password: demo
+  jpa:
+    show-sql: true
+    database: mysql
+    generate-ddl: false
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+mail:
+  input: mail.cmd

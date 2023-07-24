@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="https://www.services.elca.vn/uri/xmlns/account/1/0"
+           targetNamespace="https://www.services.elca.vn/uri/xmlns/account/1/0"
+           elementFormDefault="qualified">
+    <xs:element name="getUserRequest" type="getUserRequestType"/>
+    <xs:element name="getUserResponse" type="getUserResponseType"/>
+    <xs:element name="updateUserRequest" type="updateUserRequestType"/>
+
+    <xs:complexType name="getUserRequestType">
+        <xs:sequence>
+            <xs:element name="number" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="getUserResponseType">
+        <xs:sequence>
+            <xs:element name="number" type="xs:string"/>
+            <xs:element name="basicInfo" type="basicInfoType"/>
+            <xs:element name="address" type="addressType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="updateUserRequestType">
+        <xs:sequence>
+            <xs:element name="number" type="xs:string"/>
+            <xs:element name="basicInfo" type="basicInfoType"/>
+            <xs:element name="address" type="addressType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="basicInfoType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="email" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="addressType">
+        <xs:sequence>
+            <xs:element name="street" type="xs:string"/>
+            <xs:element name="city" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

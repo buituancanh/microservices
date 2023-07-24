@@ -1,0 +1,18 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: mysql-volume
+  namespace: default
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: standard
+  volumeMode: Filesystem
+  selector:
+    matchLabels:
+      release: "stable"
+    matchExpressions:
+      - { key: environment, operator: In, values: [ dev ] }

@@ -1,0 +1,13 @@
+# HTTP Server
+server.port: 4444   # HTTP (Tomcat) port
+
+spring:
+  application:
+    name: mail-service  # Service registers under this name
+  mail:
+    host: outlook-vn.elcanet.local
+    port: 25
+    properties:
+      mail:
+        smtp:
+          sendpartial: true
